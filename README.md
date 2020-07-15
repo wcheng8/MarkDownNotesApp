@@ -56,11 +56,11 @@ The main audience for this application would be developers who want an easy to u
 
 ##Data Flow Diagram
 
-![Data Flow Diagram](docs/Diagrams/Dataflow Diagram.png) ![Data Flow Diagram legend](docs/Diagrams/DataFlow Legend.png)
+![Data Flow Diagram](docs/Diagrams/DataFlowDiagram.png) ![Data Flow Diagram legend](docs/Diagrams/DataFlowLegend.png)
 
 ##Application Architecture Diagram
 
-![Application Architecture Diagram](docs/Diagrams/Application Architecture Diagram.png)
+![Application Architecture Diagram](docs/Diagrams/ApplicationArchitectureDiagram.png)
 
 ##User Stories:
 
@@ -119,33 +119,37 @@ As a user I want to have an easy and convenient way to post and edit my blogs, s
 ##Wireframes for multiple standard screen sizes, created using industry standard software:
 
 1. This is the login page you will be greeted with before you can access the blog posts. The right mobile view shows what the hamburger menu will show once pressed and the left will display the page as normal.
-![Login/SignUp Screen Desktop](docs/WireFrame/LogIn:SignUp.png) ![Login/SignUp Screen mobile](docs/WireFrame/Phone login:signup.png)
+![Login/SignUp Screen Desktop](docs/WireFrame/LogIn:SignUp.png) ![Login/SignUp Screen mobile](docs/WireFrame/PhonelLogin:signup.png)
+
 2. This shows the home page where you will be able to see all the blogs with a thumbnail image and title of the blog post. Both mobile and desktop views are shown, they will both be scrollable depending on the amount of posts.
-![Home page desktop](docs/WireFrame/Home page desktop.png) ![Home page mobile](docs/WireFrame/Home page blogs.png)
+![Home page desktop](docs/WireFrame/HomeDesktop.png) ![Home page mobile](docs/WireFrame/HomeMobile.png)
 
 3. This shows the creation of a blog post from the users view. They will be able to access this from the user dashboard menu.
-![Create blog desktop](docs/WireFrame/create post desktop.png) ![Create blog mobile](docs/WireFrame/Create blog post mobile.png)
+![Create blog desktop](docs/WireFrame/CreateBlogPostDesktop.png) ![Create blog mobile](docs/WireFrame/CreateBlogPostMobile.png)
+
 4. Here you can see the view of a blog post if you have created it. The edit button is only for an individual who has created that blog post. You can also see the like and comment buttons.
-![Edit blog post desktop](docs/WireFrame/editBlogPostDesktop.png) ![Edit blog post mobile](docs/WireFrame/View and edit.png)
+![Edit blog post desktop](docs/WireFrame/EditPostDesktop.png) ![Edit blog post mobile](docs/WireFrame/EditPostMobile.png)
 
 5. This is where you can add comments to other users&#39; blog posts, once you click on the comment icon in either browser or mobile it will take you to this comment section. 
-![Comments desktop](docs/WireFrame/Comments on blogs.png) ![Comments mobile](docs/WireFrame/Comments mobile.png)
+![Comments desktop](docs/WireFrame/BlogCommentDesktop.png) ![Comments mobile](docs/WireFrame/CommentsMobile.png)
+
 6. This shows the user dashboard. The user can create, read, edit and delete posts from here. Users can also update their user details from this page.
-![User Dashboard desktop](docs/WireFrame/Dashboard dekstop.png) ![User dashboard mobile](docs/WireFrame/Dashboard mobile.png)
+![User Dashboard desktop](docs/WireFrame/DashboardDesktop.png) ![User dashboard mobile](docs/WireFrame/DashboardMobile.png)
+
 7. The favourites page is the same as the home page in terms of how it looks but it will only show your favoured blog posts.
-![User favourites desktop](docs/WireFrame/Home page desktop.png) ![User favourites mobile](docs/WireFrame/Home page blogs.png)
+![User favourites desktop](docs/WireFrame/HomeDesktop.png) ![User favourites mobile](docs/WireFrame/HomeMobile.png)
 
 ##Screenshots of your Trello board demonstrating use throughout the initial stages of the project:
 
 The letter A, B, C, D, WTF is the priority in which the task should be implemented. A is important to the application while WTF is Hold my Beer.
 
-![1st step trello](docs/Trello Screenshots/1st screenshot.png)
+![1st step trello](docs/TrelloScreenshots/1st-screenshot.png)
 
-![2nd step trello](docs/Trello Screenshots/4th screenshot.png)
+![2nd step trello](docs/TrelloScreenshots/4th-screenshot.png)
 
-![3rd step trello](docs/Trello Screenshots/5th screenshot.png)
+![3rd step trello](docs/TrelloScreenshots/5th-screenshot.png)
 
-![4th step trello](docs/Trello Screenshots/6th screenshot.png)
+![4th step trello](docs/TrelloScreenshots/6th-screenshot.png)
 
 ![5th step trello]()
 
