@@ -1,10 +1,10 @@
 # Markdown BlogPosts
 
-Purpose:
+##Purpose:
 
 Create an application where the user can write in markdown format. Give the users the ability to create, read, update and delete posts. The markdown post will be converted and displayed in HTML and then displayed to the user. The posts can either be public or private, where public posts will be displayed to anyone, and could be sorted with basic functionality. Private posts will only be displayed to the creator of the post and no other users will be able to access the post. The site will serve as a quick and easy to use interactive blog-post platform for developers or anyone who prefers to write in markdown format and convert those files into common documentation types such as pdf, .doc and .docx. It can also be used as a teaching aid to help people develop skills to be able to use the markdown format, with a simple cheatsheet implemented into the help section of the application.
 
-Functionality / features:
+##Functionality / features:
 
 Some of the functionalities that app will have are:
 
@@ -32,11 +32,11 @@ Core
 - Ability to use speech recognition api to help write in markdown
 - Generate QR codes for easy access to the blog post, or authentication
 
-Target audience:
+##Target audience:
 
 The main audience for this application would be developers who want an easy to use online blog style application which uses markdown as the main way of text input and has the ability to convert posts/articles to a pdf format. It also introduces new developers to markdown and shows how easy it is to write in markdown and then convert using a conversion tool to convert their markdown to common documentation types.
 
-Tech stack:
+##Tech stack:
 
 **MongoDB** : MongoDB is a non relational database that stores data in a JSON format.
 
@@ -54,15 +54,15 @@ Tech stack:
 
 **bcryptjs** : We use this to hash passwords before storing them in the database
 
-Data Flow Diagram
+##Data Flow Diagram
 
-![](RackMultipart20200715-4-r13mk3_html_4a2c7bc35b997250.png) ![](RackMultipart20200715-4-r13mk3_html_b804f38309609e88.png)
+![Data Flow Diagram](docs/Diagrams/Dataflow Diagram.png) ![Data Flow Diagram legend](docs/Diagrams/DataFlow Legend.png)
 
-Application Architecture Diagram
+##Application Architecture Diagram
 
-![](RackMultipart20200715-4-r13mk3_html_c53b9851c2fa110d.png)
+![Application Architecture Diagram](docs/Diagrams/Application Architecture Diagram.png)
 
-User Stories:
+##User Stories:
 
 **Functional user stories**
 
@@ -116,29 +116,39 @@ As a user I want to have an easy and convenient way to organize my blogs, so tha
 
 As a user I want to have an easy and convenient way to post and edit my blogs, so that I know exactly how to use the application from the get go.
 
-Wireframes for multiple standard screen sizes, created using industry standard software:
+##Wireframes for multiple standard screen sizes, created using industry standard software:
 
-1. This is the login page you will be greeted with before you can access the blog posts. The right mobile view shows what the hamburger menu will show once ![](RackMultipart20200715-4-r13mk3_html_19e6c13c5c42bad.png) ![](RackMultipart20200715-4-r13mk3_html_e6633e70986e2a87.png)pressed and the left will display the page as normal.
+1. This is the login page you will be greeted with before you can access the blog posts. The right mobile view shows what the hamburger menu will show once pressed and the left will display the page as normal.
+![Login/SignUp Screen Desktop](docs/WireFrame/LogIn:SignUp.png) ![Login/SignUp Screen mobile](docs/WireFrame/Phone login:signup.png)
 2. This shows the home page where you will be able to see all the blogs with a thumbnail image and title of the blog post. Both mobile and desktop views are shown, they will both be scrollable depending on the amount of posts.
+![Home page desktop](docs/WireFrame/Home page desktop.png) ![Home page mobile](docs/WireFrame/Home page blogs.png)
 
-![](RackMultipart20200715-4-r13mk3_html_be440c8cea0d4217.png) ![](RackMultipart20200715-4-r13mk3_html_3e1b71028cbeffac.png)
+3. This shows the creation of a blog post from the users view. They will be able to access this from the user dashboard menu.
+![Create blog desktop](docs/WireFrame/create post desktop.png) ![Create blog mobile](docs/WireFrame/Create blog post mobile.png)
+4. Here you can see the view of a blog post if you have created it. The edit button is only for an individual who has created that blog post. You can also see the like and comment buttons.
+![Edit blog post desktop](docs/WireFrame/editBlogPostDesktop.png) ![Edit blog post mobile](docs/WireFrame/View and edit.png)
 
-1. This shows the creation of a blog post from the users view. They will be able to ![](RackMultipart20200715-4-r13mk3_html_27fbe1f0916d72f0.png) ![](RackMultipart20200715-4-r13mk3_html_ef7a87aa1076896d.png)access this from the user dashboard menu.
-2. Here you can see the view of a blog post if you have created it. The edit button is only for an individual who has created that blog post. You can also see the like and comment buttons
+5. This is where you can add comments to other users&#39; blog posts, once you click on the comment icon in either browser or mobile it will take you to this comment section. 
+![Comments desktop](docs/WireFrame/Comments on blogs.png) ![Comments mobile](docs/WireFrame/Comments mobile.png)
+6. This shows the user dashboard. The user can create, read, edit and delete posts from here. Users can also update their user details from this page.
+![User Dashboard desktop](docs/WireFrame/Dashboard dekstop.png) ![User dashboard mobile](docs/WireFrame/Dashboard mobile.png)
+7. The favourites page is the same as the home page in terms of how it looks but it will only show your favoured blog posts.
+![User favourites desktop](docs/WireFrame/Home page desktop.png) ![User favourites mobile](docs/WireFrame/Home page blogs.png)
 
-![](RackMultipart20200715-4-r13mk3_html_a26071c9a414e908.png) ![](RackMultipart20200715-4-r13mk3_html_e1e458ce4d7b081b.png)
-
-1. This is where you can add comments to other users&#39; blog posts, once you click on the comment icon in either browser or mobile it will take you to this comment ![](RackMultipart20200715-4-r13mk3_html_d9082c44f4a98dc8.png) ![](RackMultipart20200715-4-r13mk3_html_4627468043b9fd0e.png)section.
-2. This shows the user dashboard. The user can create, read, edit and delete posts from here. Users can also update their user details from this page.
-3. ![](RackMultipart20200715-4-r13mk3_html_d44b85299a5b1621.png) ![](RackMultipart20200715-4-r13mk3_html_d3764259e4e8c259.png)The favourites page is the same as the home page in terms of how it looks but it will only show your favoured blog posts.
-
-![](RackMultipart20200715-4-r13mk3_html_3e1b71028cbeffac.png) ![](RackMultipart20200715-4-r13mk3_html_be440c8cea0d4217.png)
-
-Screenshots of your Trello board demonstrating use throughout the initial stages of the project:
+##Screenshots of your Trello board demonstrating use throughout the initial stages of the project:
 
 The letter A, B, C, D, WTF is the priority in which the task should be implemented. A is important to the application while WTF is Hold my Beer.
 
-![](RackMultipart20200715-4-r13mk3_html_8a4aa6e53bb0003a.png)
+![1st step trello](docs/Trello Screenshots/1st screenshot.png)
 
-![](RackMultipart20200715-4-r13mk3_html_26c01c58e8afb890.png)
+![2nd step trello](docs/Trello Screenshots/4th screenshot.png)
 
+![3rd step trello](docs/Trello Screenshots/5th screenshot.png)
+
+![4th step trello](docs/Trello Screenshots/6th screenshot.png)
+
+![5th step trello]()
+
+![6th step trello]()
+
+![7th step trello]()
