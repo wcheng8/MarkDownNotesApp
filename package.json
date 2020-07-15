@@ -1,0 +1,23 @@
+{
+  "name": "markdownnotetaker",
+  "version": "1.0.0",
+  "description": "Markdown notetaker",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix clientside",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix clientside",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
