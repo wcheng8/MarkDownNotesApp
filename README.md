@@ -1,10 +1,10 @@
 # Markdown BlogPosts
 
-##Purpose:
+## Purpose:
 
 Create an application where the user can write in markdown format. Give the users the ability to create, read, update and delete posts. The markdown post will be converted and displayed in HTML and then displayed to the user. The posts can either be public or private, where public posts will be displayed to anyone, and could be sorted with basic functionality. Private posts will only be displayed to the creator of the post and no other users will be able to access the post. The site will serve as a quick and easy to use interactive blog-post platform for developers or anyone who prefers to write in markdown format and convert those files into common documentation types such as pdf, .doc and .docx. It can also be used as a teaching aid to help people develop skills to be able to use the markdown format, with a simple cheatsheet implemented into the help section of the application.
 
-##Functionality / features:
+## Functionality / features:
 
 Some of the functionalities that app will have are:
 
@@ -32,11 +32,11 @@ Core
 - Ability to use speech recognition api to help write in markdown
 - Generate QR codes for easy access to the blog post, or authentication
 
-##Target audience:
+## Target audience:
 
 The main audience for this application would be developers who want an easy to use online blog style application which uses markdown as the main way of text input and has the ability to convert posts/articles to a pdf format. It also introduces new developers to markdown and shows how easy it is to write in markdown and then convert using a conversion tool to convert their markdown to common documentation types.
 
-##Tech stack:
+## Tech stack:
 
 **MongoDB** : MongoDB is a non relational database that stores data in a JSON format.
 
@@ -54,15 +54,15 @@ The main audience for this application would be developers who want an easy to u
 
 **bcryptjs** : We use this to hash passwords before storing them in the database
 
-##Data Flow Diagram
+## Data Flow Diagram
 
 ![Data Flow Diagram](docs/Diagrams/DataFlowDiagram.png) ![Data Flow Diagram legend](docs/Diagrams/DataFlowLegend.png)
 
-##Application Architecture Diagram
+## Application Architecture Diagram
 
 ![Application Architecture Diagram](docs/Diagrams/ApplicationArchitectureDiagram.png)
 
-##User Stories:
+## User Stories:
 
 **Functional user stories**
 
@@ -116,7 +116,7 @@ As a user I want to have an easy and convenient way to organize my blogs, so tha
 
 As a user I want to have an easy and convenient way to post and edit my blogs, so that I know exactly how to use the application from the get go.
 
-##Wireframes for multiple standard screen sizes, created using industry standard software:
+## Wireframes for multiple standard screen sizes, created using industry standard software:
 
 1. This is the login page you will be greeted with before you can access the blog posts. The right mobile view shows what the hamburger menu will show once pressed and the left will display the page as normal.
 ![Login/SignUp Screen Desktop](docs/WireFrame/LogIn:SignUp.png) ![Login/SignUp Screen mobile](docs/WireFrame/PhonelLogin:signup.png)
@@ -139,7 +139,7 @@ As a user I want to have an easy and convenient way to post and edit my blogs, s
 7. The favourites page is the same as the home page in terms of how it looks but it will only show your favoured blog posts.
 ![User favourites desktop](docs/WireFrame/HomeDesktop.png) ![User favourites mobile](docs/WireFrame/HomeMobile.png)
 
-##Screenshots of your Trello board demonstrating use throughout the initial stages of the project:
+## Screenshots of your Trello board demonstrating use throughout the initial stages of the project:
 
 The letter A, B, C, D, WTF is the priority in which the task should be implemented. A is important to the application while WTF is Hold my Beer.
 
