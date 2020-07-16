@@ -26,7 +26,9 @@ const Blogcard = () => {
 						Some quick example text to build on the card title and make up the
 						bulk of the card's content.
 					</CardText>
-					<Button color="primary">See Post!</Button>
+					<div className="d-flex justify-content-center">
+						<Button color="primary">See Post!</Button>
+					</div>
 				</CardBody>
 			</Card>
 		</div>

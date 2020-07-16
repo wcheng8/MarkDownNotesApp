@@ -6,6 +6,9 @@ import DashBoardPagination from "../components/DashBoardPagination";
 const Dashboard = () => {
 	return (
 		<div>
+			<div className="d-flex justify-content-center">
+				<h1 className="pt-5 pb-5">MD Notetaker</h1>
+			</div>
 			<Row>
 				<Col>
 					<Blogcard />
