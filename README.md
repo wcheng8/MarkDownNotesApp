@@ -52,7 +52,22 @@ The main audience for this application would be developers who want an easy to u
 
 **AWS** : AWS is Amazon web services this is a cloud based platform which we use to store any images from blog posts.
 
-**bcryptjs** : We use this to hash passwords before storing them in the database
+**bcryptjs** : We use this to hash passwords before storing them in the database.
+
+**body-parser** : Used to parse incoming request bodies in a middleware.
+
+**concurrently** : Allows us to run our backend and frontend concurrently and on different ports.
+
+**is-empty** : Global function that will come in handy when we use validator.
+
+**jsonwebtoken** : Used for authorization.
+
+**passport** : Used to authenticate requests, which it does through an extensible set of plugins known as strategies.
+
+**passport-jwt** : Passport strategy for authenticating with a JSON Web Token (JWT); lets you authenticate endpoints using a JWT.
+
+**validator** : Used to validate inputs (e.g. check for valid email format, confirming passwords match).
+
 
 ## Data Flow Diagram
 
