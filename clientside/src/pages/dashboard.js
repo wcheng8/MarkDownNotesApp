@@ -7,9 +7,20 @@ const Dashboard = () => {
 	return (
 		<div>
 			<div className="d-flex justify-content-center">
-				<h1 className="pt-5 pb-5">MD Notetaker</h1>
+				<h1 className="pt-5 pb-5">Dashboard</h1>
 			</div>
 			<Row>
+				<Col>
+					<Blogcard />
+				</Col>
+				<Col>
+					<Blogcard />
+				</Col>
+				<Col>
+					<Blogcard />
+				</Col>
+			</Row>
+			<Row className="pt-5">
 				<Col>
 					<Blogcard />
 				</Col>
