@@ -11,8 +11,8 @@ import {
 	DropdownToggle,
 	DropdownMenu,
 	DropdownItem,
-	NavbarText,
 } from "reactstrap";
+import { NavLink as NavLinkrouter } from "react-router-dom";
 
 const AppNavbar = (props) => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -27,15 +27,19 @@ const AppNavbar = (props) => {
 				<Collapse isOpen={isOpen} navbar>
 					<Nav className="mr-auto" navbar>
 						<NavItem>
-							<NavLink href="/components/">Dashboard</NavLink>
-						</NavItem>
-						<NavItem>
-							<NavLink href="https://github.com/reactstrap/reactstrap">
-								Favourites
+							<NavLink>
+								<NavLinkrouter to="/dashboard">Dashboard</NavLinkrouter>
 							</NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink href="/components/">Post a blog!</NavLink>
+							<NavLink>
+								<NavLinkrouter to="/favourites">Favourites</NavLinkrouter>
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink>
+								<NavLinkrouter to="/post">Post a blog!</NavLinkrouter>
+							</NavLink>
 						</NavItem>
 					</Nav>
 					<Nav className="ml-auto" navbar>
@@ -44,11 +48,19 @@ const AppNavbar = (props) => {
 								User
 							</DropdownToggle>
 							<DropdownMenu right>
-								<DropdownItem>Edit Profile</DropdownItem>
-								<DropdownItem>My Notes</DropdownItem>
-								<DropdownItem>About MD</DropdownItem>
+								<DropdownItem>
+									<NavLinkrouter to="/profile">Profile</NavLinkrouter>
+								</DropdownItem>
+								<DropdownItem>
+									<NavLinkrouter to="/mynotes">My Notes</NavLinkrouter>
+								</DropdownItem>
+								<DropdownItem>
+									<NavLinkrouter to="/about">About MD</NavLinkrouter>
+								</DropdownItem>
 								<DropdownItem divider />
-								<DropdownItem>LogOut</DropdownItem>
+								<DropdownItem>
+									<NavLinkrouter to="/">Logout</NavLinkrouter>
+								</DropdownItem>
 							</DropdownMenu>
 						</UncontrolledDropdown>
 					</Nav>

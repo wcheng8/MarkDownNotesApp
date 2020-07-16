@@ -3,7 +3,14 @@ import "./App.css";
 import { Container } from "reactstrap";
 import AppNavbar from "./components/AppNavbar";
 import Dashboard from "./pages/dashboard";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Favourites from "./pages/favourite";
+import Post from "./pages/Post";
+import MyNotes from "./pages/Users/MyNotes";
+import Profile from "./pages/Users/Profile";
+import AboutMD from "./pages/Users/AboutMD";
+import Home from "./pages/Home";
+
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
 	return (
@@ -11,7 +18,13 @@ function App() {
 			<Router>
 				<AppNavbar />
 				<Container className="pt-4">
-					<Dashboard />
+					<Route exact path="/dashboard" component={Dashboard} />
+					<Route exact path="/" component={Home} />
+					<Route exact path="/favourites" component={Favourites} />
+					<Route exact path="/post" component={Post} />
+					<Route exact path="/mynotes" component={MyNotes} />
+					<Route exact path="/profile" component={Profile} />
+					<Route exact path="/about" component={AboutMD} />
 				</Container>
 			</Router>
 		</div>

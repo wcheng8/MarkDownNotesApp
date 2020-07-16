@@ -1,5 +1,6 @@
 import React from "react";
 import { Pagination, PaginationItem, PaginationLink } from "reactstrap";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const DashBoardPagination = () => {
 	return (
