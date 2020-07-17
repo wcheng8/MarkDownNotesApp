@@ -43,6 +43,11 @@ const AppNavbar = (props) => {
 						</NavItem>
 					</Nav>
 					<Nav className="ml-auto" navbar>
+						<NavItem>
+							<NavLink>
+								<NavLinkrouter to="/signup">Sign Up</NavLinkrouter>
+							</NavLink>
+						</NavItem>
 						<UncontrolledDropdown nav inNavbar>
 							<DropdownToggle nav caret>
 								User
