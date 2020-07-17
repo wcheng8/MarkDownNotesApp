@@ -79,6 +79,12 @@ The main audience for this application would be developers who want an easy to u
 
 ## User Stories:
 
+**User Personas** 
+
+**John**: 19 year old computer science student who is currently learning about markdown at university and want’s a easy and practical way of understanding and becoming more confident using it. He plans to use the blog to write his assignments in and the converting them to the doc type required. He would like to have a helper function which shows the basics of markdown while typing. 
+
+**Susan**: 30 years old full stack developer. Susan would like to have a blog which supports markdown as this is what she commonly writes in when posting blogs about her experiences in the IT industry. She would like to have a user dashboard and have the ability to comment on other users posts to help provide feedback.
+
 **Functional user stories**
 
 As a User I want to have multiple ways of signing up to the website, as I use a preferred way of signing in.
