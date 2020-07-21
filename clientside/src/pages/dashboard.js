@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Row, Col } from "reactstrap";
 import Blogcard from "./cards/Blogcard";
 import DashBoardPagination from "../components/DashBoardPagination";
@@ -9,7 +10,7 @@ const Dashboard = () => {
 			<div className="d-flex justify-content-center">
 				<h1 className="pt-5 pb-5">Dashboard</h1>
 			</div>
-			<Row>
+			<Row className="pt-5">
 				<Col>
 					<Blogcard />
 				</Col>

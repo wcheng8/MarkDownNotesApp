@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Redirect } from "react-router-dom";
 
 const Post = () => {
 	const [state, setState] = useState({
 		posttitle: "",
 		postcontent: "",
 	});
+	const [isSubmitform, setIsSubmitform] = useState(false);
 
 	const handleChange = (e) => {
 		setState({
@@ -17,12 +19,21 @@ const Post = () => {
 
 	const submitForm = (e) => {
 		e.preventDefault();
-		axios.post("http://localhost:5000/api/notes", {
-			title: state.posttitle,
-			content: state.postcontent,
-		});
-		console.log(state);
+		axios
+			.post("http://localhost:5000/api/notes", {
+				title: state.posttitle,
+				content: state.postcontent,
+			})
+			.then((res) => {
+				if (res.status === 200) {
+					setIsSubmitform(true);
+					console.log("Post has been submitted to server! Redirecting!");
+				}
+			});
 	};
+	if (isSubmitform) {
+		return <Redirect to="/dashboard" />;
+	}
 
 	return (
 		<div>
