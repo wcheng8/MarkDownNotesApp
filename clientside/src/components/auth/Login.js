@@ -5,14 +5,13 @@ import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
 
-
 class Login extends Component {
   constructor() {
     super();
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
     };
   }
 
@@ -23,37 +22,37 @@ class Login extends Component {
     }
   }
 
-componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/dashboard"); // push user to dashboard when they login
     }
 
-if (nextProps.errors) {
+    if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
 
-onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
-onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
 
-const userData = {
+    const userData = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
-this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
+    this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
   };
 
-render() {
+  render() {
     const { errors } = this.state;
 
-return (
+    return (
       <div className="container">
         <div style={{ marginTop: "4rem" }} className="row">
           <div className="col s8 offset-s2">
@@ -78,7 +77,7 @@ return (
                   id="email"
                   type="email"
                   className={classnames("", {
-                    invalid: errors.email || errors.emailnotfound
+                    invalid: errors.email || errors.emailnotfound,
                   })}
                 />
                 <label htmlFor="email">Email</label>
@@ -95,7 +94,7 @@ return (
                   id="password"
                   type="password"
                   className={classnames("", {
-                    invalid: errors.password || errors.passwordincorrect
+                    invalid: errors.password || errors.passwordincorrect,
                   })}
                 />
                 <label htmlFor="password">Password</label>
@@ -110,7 +109,7 @@ return (
                     width: "150px",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
-                    marginTop: "1rem"
+                    marginTop: "1rem",
                   }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
@@ -129,15 +128,12 @@ return (
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 
-export default connect(
-  mapStateToProps,
-  { loginUser }
-)(Login);
+export default connect(mapStateToProps, { loginUser })(Login);
