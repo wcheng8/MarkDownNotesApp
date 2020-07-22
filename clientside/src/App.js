@@ -14,13 +14,12 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
-import DashBoardPagination from "./components/DashBoardPagination";
+// import Dashboard from "./components/dashboard/Dashboard";
+// import DashBoardPagination from "./components/DashBoardPagination";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -51,18 +50,17 @@ class App extends Component {
 					<AppNavbar />
 						<Container className="pt-4">
 							<Route exact path="/dashboard" component={BlogPosts} />
-							<Route exact path="/favourites" component={Favourites} />
-							<Route exact path="/post" component={Post} />
-							<Route exact path="/mynotes" component={MyNotes} />
-							<Route exact path="/profile" component={Profile} />
-							<Route exact path="/about" component={AboutMD} />
+							{ <switch>
+							<PrivateRoute exact path="/favourites" component={Favourites} />
+							<PrivateRoute exact path="/post" component={Post} />
+							<PrivateRoute exact path="/mynotes" component={MyNotes} />
+							<PrivateRoute exact path="/profile" component={Profile} />
+							<PrivateRoute exact path="/about" component={AboutMD} />
+							</switch> }
 						</Container>
 							<Route exact path="/" component={Landing} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />
-					<Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-					</Switch>
 				</div>
 			</Router>
 		</Provider>
