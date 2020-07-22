@@ -52,6 +52,7 @@ class App extends Component {
 							<Route exact path="/dashboard" component={BlogPosts} />
 							<Route exact path="/favourites" component={Favourites} />
 							<Route exact path="/post" component={Post} />
+							<Route exact path="/post/:id" component={Post} />
 							<Route exact path="/mynotes" component={MyNotes} />
 							<Route exact path="/profile" component={Profile} />
 							<Route exact path="/about" component={AboutMD} />

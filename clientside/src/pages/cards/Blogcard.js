@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 import { Card, CardText, CardBody, CardSubtitle, Button } from "reactstrap";
 
-const Blogcard = ({ title, content }) => {
+const Blogcard = ({ title, content, id }) => {
+	const [data, setData] = useState("");
+	const buttonClick = () => {
+		console.log(id);
+		const getPosts = axios
+			.get(`http://localhost:5000/api/notes/${id}`)
+			.then((res) => {
+				setData(res.data);
+				console.log(res.data);
+			})
+			.catch((err) => console.log(err));
+	};
+
 	return (
 		<div>
-			<Card>
+			<Card data-id={id}>
 				{/* <CardImg
 					top
 					width="100%"
@@ -16,7 +29,9 @@ const Blogcard = ({ title, content }) => {
 					<CardSubtitle>{title}</CardSubtitle>
 					<CardText>{content}</CardText>
 					<div className="d-flex justify-content-center">
-						<Button color="primary">See Post!</Button>
+						<Button onClick={buttonClick} color="primary">
+							See Post!
+						</Button>
 					</div>
 				</CardBody>
 			</Card>
