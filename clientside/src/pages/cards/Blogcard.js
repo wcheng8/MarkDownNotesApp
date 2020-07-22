@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardText, CardBody, CardSubtitle, Button } from "reactstrap";
 
-const Blogcard = () => {
+const Blogcard = ({ title, content }) => {
 	return (
 		<div>
 			<Card>
@@ -12,12 +12,9 @@ const Blogcard = () => {
 					alt="Card image cap"
 				/> */}
 				<CardBody>
-					<h2 className="font-weight-bold pb-2">Card title</h2>
-					<CardSubtitle>Card subtitle</CardSubtitle>
-					<CardText>
-						Some quick example text to build on the card title and make up the
-						bulk of the card's content.
-					</CardText>
+					<h2 className="font-weight-bold pb-2">{title}</h2>
+					<CardSubtitle>{title}</CardSubtitle>
+					<CardText>{content}</CardText>
 					<div className="d-flex justify-content-center">
 						<Button color="primary">See Post!</Button>
 					</div>

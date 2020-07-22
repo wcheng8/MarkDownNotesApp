@@ -14,7 +14,6 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -31,24 +30,24 @@ if (localStorage.jwtToken) {
 	const decoded = jwt_decode(token);
 	// Set user and isAuthenticated
 	store.dispatch(setCurrentUser(decoded));
-  
+
 	// Check for expired token
 	const currentTime = Date.now() / 1000; // to get in milliseconds
 	if (decoded.exp < currentTime) {
-	  // Logout user
-	  store.dispatch(logoutUser());
-	  // Redirect to login
-	  window.location.href = "./login";
+		// Logout user
+		store.dispatch(logoutUser());
+		// Redirect to login
+		window.location.href = "./login";
 	}
-  }
+}
 
 class App extends Component {
-  render() {
-    return (
-		<Provider store={store}>
-			<Router>
-				<div className="App">
-					<AppNavbar />
+	render() {
+		return (
+			<Provider store={store}>
+				<Router>
+					<div className="App">
+						<AppNavbar />
 						<Container className="pt-4">
 							<Route exact path="/dashboard" component={BlogPosts} />
 							<Route exact path="/favourites" component={Favourites} />
@@ -56,17 +55,17 @@ class App extends Component {
 							<Route exact path="/mynotes" component={MyNotes} />
 							<Route exact path="/profile" component={Profile} />
 							<Route exact path="/about" component={AboutMD} />
-						</Container>
 							<Route exact path="/" component={Landing} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />
-					<Switch>
-              <PrivateRoute exact path="/dashboard" component={Dashboard} />
-					</Switch>
-				</div>
-			</Router>
-		</Provider>
-    );
-  }
+							<Switch>
+								<PrivateRoute exact path="/dashboard" component={Dashboard} />
+							</Switch>
+						</Container>
+					</div>
+				</Router>
+			</Provider>
+		);
+	}
 }
 export default App;
