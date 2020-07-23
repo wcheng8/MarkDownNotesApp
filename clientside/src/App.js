@@ -6,7 +6,6 @@ import Favourites from "./pages/favourite";
 import Post from "./pages/Post";
 import MyNotes from "./pages/Users/MyNotes";
 import Profile from "./pages/Users/Profile";
-import AboutMD from "./pages/Users/AboutMD";
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwt_decode from "jwt-decode";
@@ -21,6 +20,7 @@ import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Showpost from "./pages/Showpost";
 import EditPosts from "./pages/EditPosts";
+import MarkdownAbout from "./pages/MarkdownAbout";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
 	// Set auth token header auth
@@ -51,12 +51,12 @@ class App extends Component {
 						<Container className="pt-4">
 							<Route exact path="/dashboard" component={BlogPosts} />
 							<Route exact path="/favourites" component={Favourites} />
+							<Route exact path="/about" component={MarkdownAbout} />
 							<Route exact path="/post" component={Post} />
 							<Route exact path="/post/edit/:id" component={EditPosts} />
 							<Route exact path="/post/:id" component={Showpost} />
 							<Route exact path="/mynotes" component={MyNotes} />
 							<Route exact path="/profile" component={Profile} />
-							<Route exact path="/about" component={AboutMD} />
 							<Route exact path="/" component={Landing} />
 							<Route exact path="/register" component={Register} />
 							<Route exact path="/login" component={Login} />

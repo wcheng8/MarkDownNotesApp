@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { Button, Form, FormGroup, Label, Input, Row, Col } from "reactstrap";
+import MDbriefsheet from "../components/MDbriefsheet";
 
 const Post = (props) => {
 	const [state, setState] = useState({
@@ -32,9 +33,20 @@ const Post = (props) => {
 
 	return (
 		<div>
+			<Row>
+				<Col className="col-4">
+					<h1>Post!</h1>
+				</Col>
+				<Col className="col-4">
+					<MDbriefsheet />
+				</Col>
+
+				<Col className="col-4">
+					<p>Preview</p>
+				</Col>
+			</Row>
 			<Form onSubmit={submitForm}>
 				<FormGroup>
-					<Label for="posttitle">Post Title</Label>
 					<Input
 						type="text"
 						value={state.posttitle}

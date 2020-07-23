@@ -53,7 +53,7 @@ const MDbriefsheet = (props) => {
 						<Row>
 							<Col>--- horizontal rule</Col>
 						</Row>
-						<Link to="">...More</Link>
+						<Link to="/about">...More</Link>
 					</Container>
 				</PopoverBody>
 			</Popover>
