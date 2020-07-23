@@ -19,8 +19,8 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
-import DashBoardPagination from "./components/DashBoardPagination";
-
+import Showpost from "./pages/Showpost";
+import EditPosts from "./pages/EditPosts";
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
 	// Set auth token header auth
@@ -52,7 +52,8 @@ class App extends Component {
 							<Route exact path="/dashboard" component={BlogPosts} />
 							<Route exact path="/favourites" component={Favourites} />
 							<Route exact path="/post" component={Post} />
-							<Route exact path="/post/:id" component={Post} />
+							<Route exact path="/post/edit/:id" component={EditPosts} />
+							<Route exact path="/post/:id" component={Showpost} />
 							<Route exact path="/mynotes" component={MyNotes} />
 							<Route exact path="/profile" component={Profile} />
 							<Route exact path="/about" component={AboutMD} />

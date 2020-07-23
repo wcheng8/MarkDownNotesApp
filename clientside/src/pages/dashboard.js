@@ -7,7 +7,6 @@ import React, { Component } from "react";
 export class Dashboard extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			posts: [],
 		};
@@ -23,6 +22,7 @@ export class Dashboard extends Component {
 				this.setState({
 					posts: res.data,
 				});
+				this.props.history.push("/dashboard");
 			})
 			.catch((err) => console.log(err));
 	}

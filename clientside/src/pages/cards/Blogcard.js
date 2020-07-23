@@ -1,20 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { Card, CardText, CardBody, CardSubtitle, Button } from "reactstrap";
+import { Card, CardText, CardBody, CardSubtitle } from "reactstrap";
+import { Link } from "react-router-dom";
 
 const Blogcard = ({ title, content, id }) => {
-	const [data, setData] = useState("");
-	const buttonClick = () => {
-		console.log(id);
-		const getPosts = axios
-			.get(`http://localhost:5000/api/notes/${id}`)
-			.then((res) => {
-				setData(res.data);
-				console.log(res.data);
-			})
-			.catch((err) => console.log(err));
-	};
-
 	return (
 		<div>
 			<Card data-id={id}>
@@ -29,9 +17,9 @@ const Blogcard = ({ title, content, id }) => {
 					<CardSubtitle>{title}</CardSubtitle>
 					<CardText>{content}</CardText>
 					<div className="d-flex justify-content-center">
-						<Button onClick={buttonClick} color="primary">
+						<Link to={`/post/${id}`} className="btn btn-primary">
 							See Post!
-						</Button>
+						</Link>
 					</div>
 				</CardBody>
 			</Card>
