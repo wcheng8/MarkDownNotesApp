@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown/with-html";
 export class Showpost extends Component {
 	state = {
 		details: "",
@@ -39,10 +40,14 @@ export class Showpost extends Component {
 	}
 
 	render() {
+		const markdown = `# Header 1
+    # Header 2`;
 		return (
 			<>
-				<h1>{this.state.details.title}</h1>
-				<p>{this.state.details.content}</p>
+				<h1 className=".text-dark border-bottom border-dark py-3 bg-light ">
+					{this.state.details.title}
+				</h1>
+				<ReactMarkdown source={this.state.details.content} />
 				<Link
 					className="btn btn-primary"
 					to={`/post/edit/${this.state.details._id}`}
