@@ -50,6 +50,7 @@ const Post = (props) => {
 						type="textarea"
 						value={state.postcontent}
 						style={{ height: 700 }}
+						placeholder="Write posts in Markdown..."
 						name="postcontent"
 						id="blogtext"
 						onChange={handleChange}

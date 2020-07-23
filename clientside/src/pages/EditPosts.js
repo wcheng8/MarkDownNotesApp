@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Button, Form, FormGroup, Input } from "reactstrap";
+import { Button, Form, FormGroup, Input, Row, Col } from "reactstrap";
+import MDbriefsheet from "../components/MDbriefsheet";
 
 export class EditPosts extends Component {
 	constructor(props) {
@@ -59,7 +60,18 @@ export class EditPosts extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Edit Post</h1>
+				<Row>
+					<Col className="col-4">
+						<h1>Edit Post</h1>
+					</Col>
+					<Col className="col-4">
+						<MDbriefsheet />
+					</Col>
+
+					<Col className="col-4">
+						<p>Preview</p>
+					</Col>
+				</Row>
 				<Form onSubmit={this.submitForm}>
 					<FormGroup>
 						<Input

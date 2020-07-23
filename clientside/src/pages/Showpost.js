@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown/with-html";
+import { Container } from "reactstrap";
 export class Showpost extends Component {
 	state = {
 		details: "",
@@ -40,23 +41,28 @@ export class Showpost extends Component {
 	}
 
 	render() {
+		// For test
 		const markdown = `# Header 1
     # Header 2`;
 		return (
 			<>
-				<h1 className=".text-dark border-bottom border-dark py-3 bg-light ">
-					{this.state.details.title}
-				</h1>
-				<ReactMarkdown source={this.state.details.content} />
-				<Link
-					className="btn btn-primary"
-					to={`/post/edit/${this.state.details._id}`}
-				>
-					Edit
-				</Link>
-				<button onClick={this.onDelete} className="btn btn-danger right">
-					Delete
-				</button>
+				<Container>
+					<h1 className=".text-dark border-bottom border-dark py-3 bg-light ">
+						{this.state.details.title}
+					</h1>
+					<ReactMarkdown source={this.state.details.content} />
+				</Container>
+				<div className="pt-3 row justify-content-center">
+					<Link
+						className="btn btn-primary"
+						to={`/post/edit/${this.state.details._id}`}
+					>
+						Edit
+					</Link>
+					<button onClick={this.onDelete} className="btn btn-danger right">
+						Delete
+					</button>
+				</div>
 			</>
 		);
 	}
