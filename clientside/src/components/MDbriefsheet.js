@@ -36,7 +36,7 @@ const MDbriefsheet = (props) => {
 						</Row>
 						<Row>
 							<Col className="col-6">~~strike~~</Col>
-							<Col className="col-6">1. # List</Col>
+							<Col className="col-6">1. Num List</Col>
 						</Row>
 						<Row>
 							<Col>- Unordered List</Col>
@@ -48,7 +48,7 @@ const MDbriefsheet = (props) => {
 							<Col>![alt text for Pictures](image-url)</Col>
 						</Row>
 						<Row>
-							<Col>``javascript ```</Col>
+							<Col>```javascript ```</Col>
 						</Row>
 						<Row>
 							<Col>--- horizontal rule</Col>
