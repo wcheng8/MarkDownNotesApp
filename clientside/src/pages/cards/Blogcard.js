@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card, CardText, CardBody, CardSubtitle } from "reactstrap";
 import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown/with-html";
 
 const Blogcard = ({ title, content, id }) => {
 	return (
 		<div>
-			<Card data-id={id}>
+			<Card data-id={id} style={{ height: "400px" }}>
 				{/* <CardImg
 					top
 					width="100%"
@@ -15,7 +16,9 @@ const Blogcard = ({ title, content, id }) => {
 				<CardBody>
 					<h2 className="font-weight-bold pb-2">{title}</h2>
 					<CardSubtitle>{title}</CardSubtitle>
-					<CardText>{content}</CardText>
+					<CardText style={{ maxHeight: "180px" }} className="overflow-hidden">
+						<ReactMarkdown source={content} />
+					</CardText>
 					<div className="d-flex justify-content-center">
 						<Link to={`/post/${id}`} className="btn btn-primary">
 							See Post!

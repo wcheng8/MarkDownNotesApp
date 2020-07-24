@@ -69,7 +69,7 @@ export class EditPosts extends Component {
 					</Col>
 
 					<Col className="col-4">
-						<p>Preview</p>
+						<Button onClick={this.submitForm}>Preview</Button>
 					</Col>
 				</Row>
 				<Form onSubmit={this.submitForm}>
