@@ -1,22 +1,23 @@
 import React from "react";
-import { Card, CardText, CardBody, CardSubtitle } from "reactstrap";
+import { Card, CardText, CardBody, CardSubtitle, CardHeader } from "reactstrap";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown/with-html";
 
 const Blogcard = ({ title, content, id }) => {
 	return (
 		<div>
-			<Card data-id={id} style={{ height: "400px" }}>
+			<Card data-id={id}>
 				{/* <CardImg
 					top
 					width="100%"
 					src="/assets/318x180.svg"
 					alt="Card image cap"
 				/> */}
+				<CardHeader className="font-weight-bold pb-2">
+					<h3>{title}</h3>
+				</CardHeader>
 				<CardBody>
-					<h2 className="font-weight-bold pb-2">{title}</h2>
-					<CardSubtitle>{title}</CardSubtitle>
-					<CardText style={{ maxHeight: "180px" }} className="overflow-hidden">
+					<CardText style={{ maxHeight: "200px" }} className="overflow-hidden">
 						<ReactMarkdown source={content} />
 					</CardText>
 					<div className="d-flex justify-content-center">
