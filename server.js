@@ -8,6 +8,7 @@ const cors = require("cors");
 // Requiring Routes
 const users = require("./routes/api/users");
 const notes = require("./routes/api/note");
+const convertpdf = require("./routes/api/convertpdf");
 
 app.use(cors());
 // Bodyparser middleware
@@ -37,6 +38,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/api/notes/convertpdf", convertpdf);
 app.use("/api/notes", notes);
 
 const port = process.env.PORT || 5000;

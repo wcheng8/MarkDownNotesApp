@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.720.0",
     "axios": "^0.19.2",
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
@@ -23,6 +24,8 @@
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "markdown-pdf": "^10.0.0",
+    "md-to-pdf": "^3.1.1",
     "mongoose": "^5.9.24",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
