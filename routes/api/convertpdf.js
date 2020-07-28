@@ -40,16 +40,12 @@ const note = app.get("/:noteId", async (req, res) => {
 
 		if (pdf) {
 			console.log("note converted to pdf!");
-			const pathdir = uploadFile("./note.pdf");
-			console.log(pathdir);
+			uploadFile("../../note.pdf");
 		}
 
 		return note;
 	});
 });
-
-// Getpathfile
-let pathfile = [];
 
 // Uploading file to AWS
 const uploadFile = (fileName) => {
@@ -60,6 +56,7 @@ const uploadFile = (fileName) => {
 		Bucket: "mdstorageexample",
 		Body: fs.createReadStream(filePath),
 		Key: "folder/" + Date.now() + "_" + path.basename(filePath),
+		ACL: "public-read",
 	};
 	// Upload to AWS
 	let pdflink = s3.upload(params, function (err, data) {
@@ -77,7 +74,6 @@ const uploadFile = (fileName) => {
 	});
 	return pdflink;
 };
-console.log(pathfile);
 console.log("note sent!");
 
 module.exports = app;
